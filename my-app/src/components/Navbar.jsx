@@ -7,13 +7,13 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <nav className="w-full bg-sky-600 fixed top-0 left-0 right-0 z-10 shadow-xl">
+      <nav className="w-full h-auto bg-sky-600 fixed top-0 left-0 right-0 z-10 shadow-xl">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
-                <h2 className="text-2xl text-white font-bold ">LOGO</h2>
+                <h2 className="text-3xl text-white font-bold ">LOGO</h2>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
@@ -63,8 +63,8 @@ function NavBar() {
                     İletişim
                   </Link>
                 </li>
-                <li className='flex justify-center items-center  py-6'>
-                <button className='text-sky-600 uppercase bg-gradient-to-r hover:bg-gradient-to-l from-white to-blue-200 p-3 font-semibold rounded-lg w-11/12 '>Giriş Yap </button>
+                <li className='flex flex-col items-center  py-3'>
+                <button className="custom-button mb-4 w-full md:w-auto md:mb-0 text-sky-600 uppercase bg-gradient-to-r hover:bg-gradient-to-l from-white to-blue-300 p-1 font-semibold rounded-lg">Giriş Yap<br/>Kayıt Ol</button>
                 </li>
               </ul>
             </div>
