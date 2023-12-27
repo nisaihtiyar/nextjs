@@ -1,6 +1,8 @@
 import React from 'react'
 import './globals.css'
-import Navbar from '../../components/Navbar'
+import Navbar from '@/components/Navbar'
+import Card from '@/components/Card'
+
 
 const layout = ({children}) => {
   return (
@@ -8,6 +10,9 @@ const layout = ({children}) => {
         <body>
           
           <Navbar/>
+          <div className="container mt-24 mx-auto px-12 py-1 "></div>
+          <Card/>
+          
             {children}
         </body>
     </html>
