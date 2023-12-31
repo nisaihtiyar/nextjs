@@ -5,7 +5,7 @@ import Slider from '@/components/Slider'
 import Footer from '@/components/Footer'
 import Vizyon from '@/components/Vizyon'
 import Misyon from '@/components/Misyon'
-
+import ProjectsSection from '@/components/ProjectsSection'
 
 const layout = ({children}) => {
   return (
@@ -17,6 +17,7 @@ const layout = ({children}) => {
           <Slider/>
           <Misyon/>
           <Vizyon/>
+          <ProjectsSection />
           <Footer/>
             {children}
         </body>
@@ -24,4 +25,4 @@ const layout = ({children}) => {
   )
 }
 
-export default layout
+export default layout;

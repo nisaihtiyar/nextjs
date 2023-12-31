@@ -25,7 +25,7 @@ const Slider = () => {
 
   return (
     <div className="relative">
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`}/>
 
       {/* Sol yönlü buton */}
       <button
