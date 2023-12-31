@@ -1,9 +1,17 @@
-"use client"
+"use client";
 import { useState } from 'react';
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
+
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = ['/slide1.jpg', '/slide2.png', '/doktor1.jpg']; // Resim URL'lerini değiştirin
+  const images = ['/slide1.jpg', '/slide2.png', '/slide3.jpg']; // Resim URL'lerini değiştirin
+  const texts = [
+    "Bu metin slayt 1 için",
+    "Bu metin slayt 2 için",
+    "Bu metin slayt 3 için"
+  ]; // Metinleri değiştirin
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -19,19 +27,27 @@ const Slider = () => {
     <div className="relative">
       <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
 
+      {/* Sol yönlü buton */}
       <button
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 "
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 text-blue-500 text-center font-bold text-2xl p-3 rounded-full"
         onClick={prevSlide}
       >
-        Previous
+        <GrFormPrevious />
       </button>
 
+      {/* Sağ yönlü buton */}
       <button
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 "
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 text-blue-500 text-center font-bold text-2xl p-3 rounded-full"
         onClick={nextSlide}
       >
-        Next
+        <MdNavigateNext />
       </button>
+
+      {/* Metin eklemek için */}
+      <p className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 text-blue-500 text-center font-bold p-2">
+        {texts[currentIndex]}
+      </p>
+      
     </div>
   );
 };
