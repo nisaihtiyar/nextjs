@@ -7,6 +7,8 @@ import Vizyon from '@/components/Vizyon'
 import Misyon from '@/components/Misyon'
 import ProjectsSection from '@/components/ProjectsSection'
 
+
+
 const layout = ({children}) => {
   return (
     <html lang='tr'>
@@ -19,6 +21,7 @@ const layout = ({children}) => {
           <Vizyon/>
           <ProjectsSection />
           <Footer/>
+         
             {children}
         </body>
     </html>
