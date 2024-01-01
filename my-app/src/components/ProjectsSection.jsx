@@ -10,8 +10,7 @@ const projectsData = [
     title: "React Portfolio Website",
     description: "Project 1 description",
     image: "/proje2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["Hepsi", "Hastalık"],  
     previewUrl: "/",
   },
   {
@@ -19,8 +18,7 @@ const projectsData = [
     title: "Potography Portfolio Website",
     description: "Project 2 description",
     image: "/proje2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["Hepsi", "Hastalık"],    
     previewUrl: "/",
   },
   {
@@ -28,17 +26,15 @@ const projectsData = [
     title: "E-commerce Application",
     description: "Project 3 description",
     image: "/proje2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["Hepsi", "Hastalık"],   
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "İnternet Çerez Politikası",
+    description: "İnternet Çerez Politikası hakkında bilgilendirme.",
     image: "/proje2.jpg",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
+    tag: ["Hepsi", "Rehber"],    
     previewUrl: "/",
   },
   {
@@ -46,8 +42,7 @@ const projectsData = [
     title: "React Firebase Template",
     description: "Authentication and CRUD operations",
     image: "/proje2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["Hepsi", "Hastalık"],    
     previewUrl: "/",
   },
   {
@@ -55,14 +50,21 @@ const projectsData = [
     title: "Full-stack Roadmap",
     description: "Project 5 description",
     image: "/proje2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["Hepsi", "Hastalık"],    
+    previewUrl: "/",
+  },
+  {
+    id: 7,
+    title: "Vücut Kitle İndeksi Hesaplama",
+    description: "Vücut kitle indeksinizi hesaplamada size yardımcı olalım.",
+    image: "/proje2.jpg",
+    tag: ["Hepsi", "Hesaplama"],    
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Hepsi");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -80,25 +82,30 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12">
+    <section id="projects" className="from-blue-300 via-white to-blue-300 bg-gradient-to-tr">
+      <h2 className="text-center text-4xl font-bold text-neutral-700 mt-4 mb-8 md:mb-12 p-5 border-b-2 border-t-2 border-neutral-700">
         Hasta Rehberi
       </h2>
-      <div className="text-black flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-black flex flex-row justify-center items-center gap-2 py-6 ">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
+          name="Hepsi"
+          isSelected={tag === "Hepsi"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Hastalık"
+          isSelected={tag === "Hastalık"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Rehber"
+          isSelected={tag === "Rehber"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Hesaplama"
+          isSelected={tag === "Hesaplama"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
