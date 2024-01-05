@@ -6,8 +6,9 @@ import Footer from '@/components/Footer'
 import Vizyon from '@/components/Vizyon'
 import Misyon from '@/components/Misyon'
 import ProjectsSection from '@/components/ProjectsSection'
-
-
+import HeroSection from '@/components/HeroSec'
+import AboutSection from '@/components/About'
+import Card from '@/components/Card'
 
 const layout = ({children}) => {
   return (
@@ -15,11 +16,14 @@ const layout = ({children}) => {
         <body>
           
           <Navbar/>
-          <div className="container mt-20 mx-auto px-12 py-1 "></div>
+          <div className="container mt-20 mx-auto px-12 py-1 "></div>     
           <Slider/>
           <Misyon/>
           <Vizyon/>
-          <ProjectsSection />
+          <ProjectsSection /> 
+          <Card/>
+        
+
           <Footer/>
          
             {children}

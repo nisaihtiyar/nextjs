@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
+
   return (
     <div>
       <nav className="w-full h-auto bg-sky-600 fixed top-0 left-0 right-0 z-10 shadow-xl">
@@ -49,17 +50,17 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-sky-700 border-black  md:hover:text-black md:hover:bg-transparent">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#rehber" onClick={() => setNavbar(!navbar)}>
                     Hasta Rehberi
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-sky-700  border-black  md:hover:text-black md:hover:bg-transparent">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#" onClick={() => setNavbar(!navbar)}>
                     Hekimler
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-sky-700  border-black  md:hover:text-black md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#iletisim" onClick={() => setNavbar(!navbar)}>
                     İletişim
                   </Link>
                 </li>

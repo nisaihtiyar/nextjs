@@ -24,7 +24,8 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative">
+  <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px]">
+    <div className="relative overflow-hidden min-h-[400px] sm:min-h-[550px]">
       <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`}/>
 
       {/* Sol yönlü buton */}
@@ -48,6 +49,7 @@ const Slider = () => {
         {texts[currentIndex]}
       </p>
       
+    </div>
     </div>
   );
 };
